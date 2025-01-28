@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotes à venda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+        }
+        header img {
+            width: 10%; /* Adjust the percentage as needed */
+            height: auto;
+        }
+        #content {
+            display: none;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh; /* 100% of the viewport height */
+            border: none;
+        }
+        #password-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+    <script>
+        function checkPassword(event) {
+            event.preventDefault();
+            var password = document.getElementById('password').value;
+            if (password === "venda01") { // Replace 'yourpassword' with your actual password
+                document.getElementById('password-form').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert("Senha Incorreta!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="password-form">
+        <form onsubmit="checkPassword(event)">
+            <label for="password">Senha de acesso:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div id="content">
+        <header>
+            <strong>Rela&ccedil;&atilde;o de lotes a venda no loteamento Elementum (<a href="https://www.elementumatibaia.com.br/">https://www.elementumatibaia.com.br/</a>)</strong>
+        </header>
+        <header><strong>Avisos importantes:</strong></header>
+        <ul>
+            <li>Esta &eacute; uma lista criada por <strong>moradores</strong> que possuem lotes &aacute; venda, e n&atilde;o tem qualquer rela&ccedil;&atilde;o com a incorporadora ou administradores do loteamento.&nbsp;</li>
+            <li>A listagem de terrenos &eacute; um mero facilitador da conex&atilde;o entre compradores e vendedores e n&atilde;o garante qualquer compromisso de compra ou venda.</li>
+            <li>Os administradores da lista n&atilde;o se responsabilizam por quaisquer informa&ccedil;&otilde;es divulgadas. Fa&ccedil;a a devida pesquisa antes de iniciar qualquer negocia&ccedil;&atilde;o.</li>
+            <li>Para qualquer modifica&ccedil;&atilde;o, por favor envie uma mensagem em nosso grupo de whatsapp "Elementum Imoveis C & V"</li>
+        </ul>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRDwahnLAeChqQxwyKzrvGD73O59yL4qhUPAloeyVrsPYxwd_QIUWkeHgni0w1lnZ3kadwr8ErG-gj7/pubhtml?widget=true&amp;headers=false"></iframe>
+        <p>&nbsp;</p>
+    </div>
+</body>
+</html>
